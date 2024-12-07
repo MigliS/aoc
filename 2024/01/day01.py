@@ -11,16 +11,12 @@ for row in rows:
     left_list.append(left_value)
     right_list.append(right_value)
 
-# ll = min(left_list)
-# lr = min(right_list)
 left_list.sort()
 right_list.sort()
 
-differences = []
+# for l, r in zip(left_list, right_list):
+#     difference = l - r
+#     differences.append(difference)
+difference = sum(abs(l - r) for l, r in zip(left_list, right_list))
 
-for l, r in zip(left_list, right_list):
-    difference = l - r
-    differences.append(difference)
-
-
-print(sum(differences))
+print(difference)
