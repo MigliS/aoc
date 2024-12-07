@@ -5,4 +5,6 @@ for line in lines:
     # print("Line:", line)
     numbers = line.split()
 
+    numbers = list(map(int, numbers))
+
     print("Numbers:", numbers)
